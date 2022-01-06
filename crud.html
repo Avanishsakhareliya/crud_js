@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./crud.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <div class="container" style="justify-content: center; margin-left:40% ;">
+    <form action="/crud.html" name="forms">
+
+      <label>First name:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="enter your fname"><br><span id="fn"></span><br><br>
+      <label>Last name:</label><br>
+      <input type="text" id="lname" name="lname" placeholder="enter your lname"><br><span id="ln"></span><br><br>
+      <label>email:</label><br>
+      <input type="text" id="email" name="email" placeholder="enter your email"><br><span id="em"></span><br><br>
+      <label>select your gender :</label><br><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label>Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label>female</label><br> <span id="gn"></span><br>
+
+      <br>
+      <label>Choose city:</label><br>
+      <select name="city" id="city">
+        <option>surat</option>
+        <option>gandhinagar</option>
+        <option>vadodara</option>
+        <option>jamnagar</option>
+      </select>
+      <br><span id="ci"></span><br>
+      <label>Hobby : </label><br><br>
+      <input type="checkbox" id="cricket" name="cricket" class="hob" value="cricket">
+      <label> cricket</label><br>
+      <input type="checkbox" id="reading" name="reading" class="hob" value="reading">
+      <label> reading</label><br>
+      <input type="checkbox" id="dancing" name="dancing" class="hob" value="dancing">
+      <label> dancing</label><br><br>
+
+      <button id="submit">submit</button>
+
+    </form>
+  </div>
+  <br><br>
+
+  <div class="input-group" style="justify-content: center; margin-left: 40%;">
+    <input type="search" id="iner" class="form-control rounded" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" ; showResults(this.value) />
+    <button type="button" class="btn btn-outline-primary" id="search">search</button>
+  </div>
+  <br><br><br>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>no.</th>
+        <th>fname</th>
+        <th>lname</th>
+        <th>email</th>
+        <th>gender</th>
+        <th>city</th>
+        <th>hobby</th>
+        <th>action</th>
+
+
+      </tr>
+    </thead>
+    <tbody id="root">
+
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+  <script src="crud.js"></script>
+
+
+</body>
+
+</html>
